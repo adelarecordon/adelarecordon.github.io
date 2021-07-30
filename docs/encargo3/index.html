@@ -135,8 +135,60 @@
 </div>
 <hr>
 <h2 id="desbaste-respaldo-silla-fresia">Desbaste respaldo silla Fresia</h2>
-<h3 id="pasos-a-seguir">Pasos a seguir:</h3>
-<h3 id="1">1</h3>
+<h2 id="pasos-a-seguir">Pasos a seguir:</h2>
+<h3 id="paso-1-exportar-respaldo">Paso 1: Exportar respaldo</h3>
+<p>Primero convertimos el respaldo de la silla en un componente nuevo con la opción create <code>component from bodies</code>. Luego hacemos clik derecho en este y ponemos exportar.</p>
+<p><img src="/img/m1.png" alt="Imagen Simple"></p>
+<h3 id="paso-2-orientar-el-respaldo-y-alinearlo">Paso 2: Orientar el respaldo y alinearlo</h3>
+<p>Al cargar el respaldo este se abre en una pestaña nueva de trabajo. El paso siguiente es orientar el respaldo para que quede fijo a los ejes de coordenadas. Luego alinearlo con el comando <code>Align</code>para respetar la ortogonalidad con respecto al origen.</p>
+<p><img src="/img/m2.png" alt="Imagen Simple"></p>
+<p><img src="/img/m3.png" alt="Imagen Simple"></p>
+<p><img src="/img/m4.png" alt="Imagen Simple"></p>
+<h3 id="paso-3-sketch-del-bloque-de-madera">Paso 3: Sketch del bloque de madera</h3>
+<p>Sketch en el plano x. Que sobresalga el perímetro del respaldo. Luego hacer <code>extrude</code> para formar el bloque de madera.</p>
+<p><img src="/img/m5.png" alt="Imagen Simple"></p>
+<p><img src="/img/m6.png" alt="Imagen Simple"></p>
+<h3 id="paso-4-manofactura">Paso 4: Manofactura</h3>
+<p>Nos vamos a la seccion de manofactura para luego proceder con el setup.
+“Autodesk Generic 3-axis” es la máquina a utilizar. En Stock hay que elegir From soild y en el modelo hay que escojer el cuerpo <code>respaldo</code>.</p>
+<p><img src="/img/m7.png" alt="Imagen Simple"></p>
+<p><img src="/img/m8.png" alt="Imagen Simple"></p>
+<h3 id="paso-5-proyect">Paso 5: Proyect</h3>
+<p>En este paso creamos un area que corresponde a la superficie en la cual interceptará la fresa para sacar el material. Vendría a ser el limite por el cual va funcionar la máquina. Vamos a design, sketch y luego creamos un proyect con la letra p.</p>
+<p><img src="/img/m9.png" alt="Imagen Simple"></p>
+<h3 id="paso-6-adaptive-clearing">Paso 6: Adaptive clearing</h3>
+<p>Volvemos al modo Manufacture y apretamos en Adaptive Clearing. Corresponde a una limpieza donde se remueve material, creando asi la forma del respaldo.</p>
+<p>Seleccionamos la máquina con la cual vamos a trabajar. La herramienta a usar corresponde a una fresa de 6mm. En la Geometría seleccionamos el proyect que hicimos anteriormente que corresponde a los límites donde trabajará la máquina. En model seleccionamos el respaldo. Por último, en Passes hay que bajar el Optimal Load a 3 mm.</p>
+<p><img src="/img/m10.png" alt="Imagen Simple"></p>
+<p>Hay que esperar que se forme la trayectoria de la máquina. Esto es un proceso que se puede demorar ya que es largo el recorrido que tiene que hacer la fresa para remover todo el material del cubo de madera.</p>
+<p><img src="/img/m11.png" alt="Imagen Simple"></p>
+<h3 id="paso-7-parallel-finishing">Paso 7: Parallel finishing</h3>
+<p>Luego vamos a <code>Parallel</code> y poner los mismos ajustes que usamos en adaptive clearing. Este es un paso que tiene como función hacer más prolijo el acabado del respaldo. La fresa comienza a hacer trayedtorias a lo largo del respaldo, con el fin de aplanar y limpiar mas el trabajo que hizo en el paso anterior con el adaptive clearing.</p>
+<p><img src="/img/m12.png" alt="Imagen Simple"></p>
+<h3 id="paso-8-parallel-2">Paso 8: Parallel 2</h3>
+<p>Volvemos a hacer un Paralell, pero en este caso la fresa va a ir en el sentido contrario, es decir, de forma perpendicular al trabajo anterior. Para esto en el setup hay que poner en Degree 90 grados y en Stepover 2mm.</p>
+<p><img src="/img/m13.png" alt="Imagen Simple"></p>
+<h2 id="simulación-final">Simulación final</h2>
+<p>Acá evidenciamos un error que ocurre en la simulación final. Sucede que el cabezal de la herramienta choca con el bloque de madera. Para arreglar esto hay que alargar la broca que se esta usando. Editamos la máquina en el Length below holdery y lo dejamos en 40 mm.</p>
+<p><img src="/img/m14.png" alt="Imagen Simple"></p>
+<p>Ahora sí, ya está todo el trabajo hecho y damos play a la simulación final para ver como el adaptive clearing y los dos partallel que seteamos hacen su trabajo para desbastar el bloque de madera e ir formando el respaldo de la silla fresia.</p>
+<p><img src="/img/m15.png" alt="Imagen Simple"></p>
+<hr>
+<h2 id="visor-de-fusion-360-respaldo-silla-fresia">Visor de Fusion 360 Respaldo Silla Fresia</h2>
+<div>
+    <iframe 
+    src='https://alumnos4915.autodesk360.com/shares/public/SH56a43QTfd62c1cd968e243f0d6236f800a?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<p><a href="#top">[Volver Arriba]</a></p>
+<hr>
+<p>FUENTE: <a href="https://www.interempresas.net/MetalMecanica/Articulos/264276-Estrategias-de-mecanizado-por-corte-de-2-5-ejes-y-3-ejes.html">https://www.interempresas.net/MetalMecanica/Articulos/264276-Estrategias-de-mecanizado-por-corte-de-2-5-ejes-y-3-ejes.html</a></p>
 
 </div>
 </div>
